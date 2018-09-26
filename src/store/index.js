@@ -32,30 +32,9 @@ export default new Vuex.Store({
             Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?page=' + page + '&limit=10&search=' + searchValue + '&sortBy=' + sort + '&order=' + order).then((response) => {
                 state.customerData = response.data;
             });
-            Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?search=' + searchValue + '&sortBy=' + sort + '&order=' + order).then((response) => {
+            Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?search=' + searchValue).then((response) => {
                 state.customerDataAll = response.data;
             });
         }
-        // loadDataPagenation ({state}, {page, searchValue}) {
-        //     Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?page=' + page + '&limit=10&search=' + searchValue).then((response) => {
-        //         state.customerData = response.data;
-        //     });
-        //     Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?search=' + searchValue).then((response) => {
-        //         state.customerDataAll = response.data;
-        //     });
-        // },
-        // loadDataSorted ({state}, {sort, order}) {
-        //     Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?sortBy=' + sort + '&order=' + order).then((response) => {
-        //         state.customerData = response.data;
-        //     });
-        // },
-        // loadDataSearch ({state}, searchValue) {
-        //     Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?page=1&limit=10&search=' + searchValue).then((response) => {
-        //         state.customerData = response.data;
-        //     });
-        //     Vue.axios.get('https://5b9a74b8d203ad0014619cbf.mockapi.io/api/mock/clients?search=' + searchValue).then((response) => {
-        //         state.customerDataAll = response.data;
-        //     });
-        // }
     }
 });
